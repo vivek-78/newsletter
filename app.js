@@ -20,24 +20,13 @@ app.post("/" , function(req , res){
 
     const url = "https://us1.api.mailchimp.com/export/1.0."
 
-    const data = {
-        members : [{
-
-
-        FNAME : firstname
-        LNAME : lastname
-        EMAIL : email
-
-        }]
-    }
-
     const jsonData = JSON.stringify(data);
 
 
 
 });
 
-app.listen(1000 , function(){
+app.listen(process.env.PORT, function(){
  console.log("your server is running on port 1000");
 });
 
