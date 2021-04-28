@@ -52,7 +52,7 @@ app.post("/" , function( req , res){
     request.end();
 })
 
-app.listen(process.env.PORT || 8080 , function(){
+app.listen(process.env.PORT, function(){
     console.log("your server is running on port 8080");
 })
 
