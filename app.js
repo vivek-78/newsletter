@@ -44,7 +44,15 @@ app.post("/" , function( req , res){
 
     const request = http.request(url , options , function(response){
         response.on("data" , function(data){
-            console.log(JSON.parse(data))
+
+            const statuscode = response.statusCode;
+
+            if(statuscode === 200){
+                res.send("<h1>successfully submited")
+            }
+            else{
+                res.send("failed to submit")
+            }
         })
     })
 
@@ -52,7 +60,7 @@ app.post("/" , function( req , res){
     request.end();
 })
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 8080 , function(){
     console.log("your server is running on port 8080");
 })
 
