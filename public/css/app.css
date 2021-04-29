@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+}
+
+
+.bg{
+
+    background-color: rgb(162, 240, 240);
+    padding-bottom:30px ;
+}
+
+h1{
+    padding-top: 30px;
+    font-family: sans-serif;
+    font-size: 100;
+    text-align: center;
+    
+}
+
+h3{
+    font-family: sans-serif;
+    text-align: center;
+}

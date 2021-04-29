@@ -48,10 +48,10 @@ app.post("/" , function( req , res){
             const statuscode = response.statusCode;
 
             if(statuscode === 200){
-                res.send("<h1>successfully submited")
+                res.sendFile(__dirname  + "/success.html")
             }
             else{
-                res.send("failed to submit")
+                res.sendFile(__dirname + "/failure.html")
             }
         })
     })
